@@ -105,6 +105,22 @@ public class RealizarDeposito extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepositarActionPerformed
+        
+        if (this.cxValorDeposito.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campo Valor está vazio, preencha-o antes de continuar!");
+            return;
+        }
+
+        long valor;
+        if (this.cxValorDeposito.getText().length() != 0) {
+            try {
+                valor = Long.parseLong(this.cxValorDeposito.getText());
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "O campo Valor só aceita números", "Informação", JOptionPane.INFORMATION_MESSAGE);
+                this.cxValorDeposito.grabFocus();
+                return;
+            }
+        }
         JOptionPane.showMessageDialog(this, "Depósito realizado com sucesso!");
         this.setVisible(false);
         new TelaCliente().setVisible(true);
@@ -115,7 +131,6 @@ public class RealizarDeposito extends javax.swing.JFrame {
         new TelaCliente().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDepositar;

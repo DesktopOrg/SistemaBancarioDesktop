@@ -5,6 +5,8 @@
  */
 package br.com.edu.utfpr.views;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Caroline
@@ -32,15 +34,17 @@ public class LoginCliente extends javax.swing.JFrame {
         txtConta = new javax.swing.JLabel();
         cxConta = new javax.swing.JTextField();
         txtSenha = new javax.swing.JLabel();
-        cxSenha = new javax.swing.JTextField();
         txtLoginCliente = new javax.swing.JLabel();
         btnEntrarLoginC = new javax.swing.JButton();
         btnCancelarC = new javax.swing.JButton();
+        cxSenha = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         txtAgencia.setText("Agência:");
+
+        cxAgencia.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         txtConta.setText("Conta:");
 
@@ -111,8 +115,8 @@ public class LoginCliente extends javax.swing.JFrame {
                     .addComponent(cxConta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cxSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtSenha))
+                    .addComponent(txtSenha)
+                    .addComponent(cxSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEntrarLoginC, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -125,13 +129,48 @@ public class LoginCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarLoginCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarLoginCActionPerformed
+        if (this.cxAgencia.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campo Agencia está vazio, preencha-o antes de continuar!");
+            return;
+        }
+        if (this.cxConta.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campo Conta está vazio, preencha-o antes de continuar!");
+            return;
+        }
+        if (this.cxSenha.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campo Senha está vazio, preencha-o antes de continuar!");
+            return;
+        }
+
+        long valor;
+        if (this.cxAgencia.getText().length() != 0) {
+            try {
+                valor = Long.parseLong(this.cxAgencia.getText());
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "O campo Agencia só aceita números", "Informação", JOptionPane.INFORMATION_MESSAGE);
+                this.cxAgencia.grabFocus();
+                return;
+            }
+            
+        }
+
+        if (this.cxConta.getText().length() != 0) {
+            try {
+                valor = Long.parseLong(this.cxConta.getText());
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "O campo Conta só aceita números", "Informação", JOptionPane.INFORMATION_MESSAGE);
+                this.cxConta.grabFocus();
+                return;
+            }
+        }
+
         this.setVisible(false);
         new TelaCliente().setVisible(true);
     }//GEN-LAST:event_btnEntrarLoginCActionPerformed
 
     private void btnCancelarCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarCActionPerformed
-       this.setVisible(false);
-       new Login().setVisible(true);
+        this.setVisible(false);
+        new Login().setVisible(true);
     }//GEN-LAST:event_btnCancelarCActionPerformed
 
 
@@ -140,7 +179,7 @@ public class LoginCliente extends javax.swing.JFrame {
     private javax.swing.JButton btnEntrarLoginC;
     private javax.swing.JTextField cxAgencia;
     private javax.swing.JTextField cxConta;
-    private javax.swing.JTextField cxSenha;
+    private javax.swing.JPasswordField cxSenha;
     private javax.swing.JLabel txtAgencia;
     private javax.swing.JLabel txtConta;
     private javax.swing.JLabel txtLoginCliente;

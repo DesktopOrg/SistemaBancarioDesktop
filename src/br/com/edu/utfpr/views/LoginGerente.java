@@ -5,6 +5,8 @@
  */
 package br.com.edu.utfpr.views;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Caroline
@@ -31,9 +33,9 @@ public class LoginGerente extends javax.swing.JFrame {
         txtUsuarioG = new javax.swing.JLabel();
         cxUsuarioGerente = new javax.swing.JTextField();
         txtSenhaG = new javax.swing.JLabel();
-        cxSenhaGerente = new javax.swing.JTextField();
         btnEntrarG = new javax.swing.JButton();
         btnCancelarG = new javax.swing.JButton();
+        cxSenhaGerente = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -68,7 +70,7 @@ public class LoginGerente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(82, 82, 82)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txtUsuarioG)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -82,12 +84,12 @@ public class LoginGerente extends javax.swing.JFrame {
                                         .addComponent(btnCancelarG))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(txtSenhaG)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(cxSenhaGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cxSenhaGerente))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(215, 215, 215)
                         .addComponent(txtLoginGerente)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,6 +116,15 @@ public class LoginGerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarGActionPerformed
+        if(this.cxUsuarioGerente.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Campo Usuario está vazio, preencha-o antes de continuar!");
+            return;
+        }
+        if(this.cxSenhaGerente.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Campo Senha está vazio, preencha-o antes de continuar!");
+            return;
+        }
+        
         this.setVisible(false);
         new TelaGerente().setVisible(true);
     }//GEN-LAST:event_btnEntrarGActionPerformed
@@ -127,7 +138,7 @@ public class LoginGerente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelarG;
     private javax.swing.JButton btnEntrarG;
-    private javax.swing.JTextField cxSenhaGerente;
+    private javax.swing.JPasswordField cxSenhaGerente;
     private javax.swing.JTextField cxUsuarioGerente;
     private javax.swing.JLabel txtLoginGerente;
     private javax.swing.JLabel txtSenhaG;

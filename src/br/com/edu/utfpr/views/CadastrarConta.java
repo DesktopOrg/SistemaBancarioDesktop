@@ -37,8 +37,8 @@ public class CadastrarConta extends javax.swing.JFrame {
         txtConta = new javax.swing.JLabel();
         cxConta = new javax.swing.JTextField();
         txtSenhaConta = new javax.swing.JLabel();
-        cxSenhaConta = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        cxSenhaConta = new javax.swing.JPasswordField();
         jMenuBar4 = new javax.swing.JMenuBar();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -89,8 +89,8 @@ public class CadastrarConta extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addContainerGap()
                             .addComponent(txtSenhaConta)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(cxSenhaConta, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(cxSenhaConta, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(181, 181, 181)
@@ -146,6 +146,44 @@ public class CadastrarConta extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+
+        if (this.cxAgencia.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campo Agencia está vazio, preencha-o antes de continuar!");
+            return;
+        }
+
+        if (this.cxConta.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campo Conta está vazio, preencha-o antes de continuar!");
+            return;
+        }
+
+        if (this.cxSenhaConta.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campo Senha está vazio, preencha-o antes de continuar!");
+            return;
+        }
+
+        long valor;
+        if (this.cxAgencia.getText().length() != 0) {
+            try {
+                valor = Long.parseLong(this.cxAgencia.getText());
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "O campo Agencia só aceita números", "Informação", JOptionPane.INFORMATION_MESSAGE);
+                this.cxAgencia.grabFocus();
+                return;
+            }
+        }
+
+        if (this.cxConta.getText().length() != 0) {
+            try {
+                valor = Long.parseLong(this.cxConta.getText());
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "O campo Conta só aceita números", "Informação", JOptionPane.INFORMATION_MESSAGE);
+                this.cxConta.grabFocus();
+                return;
+            }
+        }
+        
         JOptionPane.showMessageDialog(this, "Cadastrado com sucesso!");
         this.setVisible(false);
         new GerenciarConta().setVisible(true);
@@ -156,13 +194,12 @@ public class CadastrarConta extends javax.swing.JFrame {
         new GerenciarConta().setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cbClienteConta;
     private javax.swing.JTextField cxAgencia;
     private javax.swing.JTextField cxConta;
-    private javax.swing.JTextField cxSenhaConta;
+    private javax.swing.JPasswordField cxSenhaConta;
     private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar4;

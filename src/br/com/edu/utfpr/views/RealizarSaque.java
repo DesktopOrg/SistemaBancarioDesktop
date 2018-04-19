@@ -105,6 +105,22 @@ public class RealizarSaque extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        if (this.cxValorSaque.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campo Valor está vazio, preencha-o antes de continuar!");
+            return;
+        }
+
+        long valor;
+        if (this.cxValorSaque.getText().length() != 0) {
+            try {
+                valor = Long.parseLong(this.cxValorSaque.getText());
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "O campo Valor só aceita números", "Informação", JOptionPane.INFORMATION_MESSAGE);
+                this.cxValorSaque.grabFocus();
+                return;
+            }
+        }
         JOptionPane.showMessageDialog(this, "Saque realizado com sucesso!");
         this.setVisible(false);
         new TelaCliente().setVisible(true);
