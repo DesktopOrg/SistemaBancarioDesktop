@@ -44,6 +44,7 @@ public class RealizarSaque extends javax.swing.JFrame {
 
         txtValorSaque.setText("Valor:");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/withdraw.png"))); // NOI18N
         jButton1.setText("Sacar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,6 +54,7 @@ public class RealizarSaque extends javax.swing.JFrame {
 
         jMenu1.setText("Menu");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/left-arrow.png"))); // NOI18N
         jMenuItem1.setText("Voltar");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,14 +120,8 @@ public class RealizarSaque extends javax.swing.JFrame {
     private javax.swing.JTextField cxValorSaque;
     private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuBar jMenuBar4;
-    private javax.swing.JMenuBar jMenuBar5;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JLabel txtRealizarSaque;
     private javax.swing.JLabel txtValorSaque;
     // End of variables declaration//GEN-END:variables

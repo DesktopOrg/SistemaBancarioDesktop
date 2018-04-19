@@ -56,6 +56,7 @@ public class CadastrarConta extends javax.swing.JFrame {
 
         txtSenhaConta.setText("Senha :");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/notes.png"))); // NOI18N
         jButton1.setText("Cadastrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +66,7 @@ public class CadastrarConta extends javax.swing.JFrame {
 
         jMenu4.setText("Menu");
 
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/left-arrow.png"))); // NOI18N
         jMenuItem4.setText("Voltar");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

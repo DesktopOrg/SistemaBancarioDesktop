@@ -39,6 +39,7 @@ public class TelaGerente extends javax.swing.JFrame {
 
         txtGerente.setText("Gerente");
 
+        btnGerenciarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/group.png"))); // NOI18N
         btnGerenciarCliente.setText("Gerenciar Cliente");
         btnGerenciarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,6 +47,7 @@ public class TelaGerente extends javax.swing.JFrame {
             }
         });
 
+        btnGerenciarConta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/note.png"))); // NOI18N
         btnGerenciarConta.setText("Gerenciar Conta");
         btnGerenciarConta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,6 +57,7 @@ public class TelaGerente extends javax.swing.JFrame {
 
         jMenu1.setText("Menu");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/logout.png"))); // NOI18N
         jMenuItem1.setText("Sair");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

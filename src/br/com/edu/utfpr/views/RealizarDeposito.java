@@ -44,6 +44,7 @@ public class RealizarDeposito extends javax.swing.JFrame {
 
         txtValorDeposito.setText("Valor:");
 
+        btnDepositar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/dollar-bill-paper-in-an-envelope-to-make-a-deposit-in-a-bank.png"))); // NOI18N
         btnDepositar.setText("Depositar");
         btnDepositar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,6 +54,7 @@ public class RealizarDeposito extends javax.swing.JFrame {
 
         jMenu1.setText("Menu");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/left-arrow.png"))); // NOI18N
         jMenuItem1.setText("Voltar");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

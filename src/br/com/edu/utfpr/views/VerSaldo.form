@@ -69,11 +69,17 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnSairVerSaldo">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/br/com/edu/utfpr/views/images/logout.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Sair"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnVoltarSaldo">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/br/com/edu/utfpr/views/images/left-arrow.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
     </Component>

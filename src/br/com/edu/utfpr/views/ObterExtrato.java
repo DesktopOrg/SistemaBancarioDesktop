@@ -55,6 +55,7 @@ public class ObterExtrato extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabExtrato);
 
+        btnVoltarExtrato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/left-arrow.png"))); // NOI18N
         btnVoltarExtrato.setText("Voltar e Fazer outra operação");
         btnVoltarExtrato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

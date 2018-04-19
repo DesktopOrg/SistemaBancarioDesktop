@@ -36,10 +36,10 @@ public class VerSaldo extends javax.swing.JFrame {
 
         jLabel1.setText("Ver Saldo");
 
-        btnSairVerSaldo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Caroline\\Desktop\\SistemaBancario\\resources\\logout.png")); // NOI18N
+        btnSairVerSaldo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/logout.png"))); // NOI18N
         btnSairVerSaldo.setText("Sair");
 
-        btnVoltarSaldo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Caroline\\Desktop\\SistemaBancario\\resources\\left-arrow.png")); // NOI18N
+        btnVoltarSaldo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/left-arrow.png"))); // NOI18N
         btnVoltarSaldo.setText("Voltar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

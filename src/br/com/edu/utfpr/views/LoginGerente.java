@@ -44,6 +44,7 @@ public class LoginGerente extends javax.swing.JFrame {
 
         txtSenhaG.setText("Senha:");
 
+        btnEntrarG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/opened-door-aperture.png"))); // NOI18N
         btnEntrarG.setText("Entrar");
         btnEntrarG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,6 +52,7 @@ public class LoginGerente extends javax.swing.JFrame {
             }
         });
 
+        btnCancelarG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/edu/utfpr/views/images/left-arrow.png"))); // NOI18N
         btnCancelarG.setText("Voltar para tela principal");
         btnCancelarG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
