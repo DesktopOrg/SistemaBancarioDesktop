@@ -17,7 +17,7 @@ public class CadastrarCliente extends javax.swing.JFrame {
      * Creates new form CadastrarCliente
      */
     public CadastrarCliente() {
-        initComponents();
+        initComponents(); 
     }
 
     /**
